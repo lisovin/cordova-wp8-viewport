@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="com.lisovin.cordova.wp8.viewport"
+      version="1.0.0">
+    <name>Viewport</name>
+    <description>Viewport Windows Phone 8 plugin.</description>
+    <license>MIT</license>
+    <keywords>viewport</keywords>
+    <repo>https://github.com/lisovin/cordova-wp8-viewport</repo>
+    <issue>https://github.com/lisovin/cordova-wp8-viewport/issues</issue>
+
+    <js-module src="www/viewport.js" name="viewport">
+        <clobbers target="Viewport" />
+    </js-module>
+
+    <!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Viewport">
+                <param name="wp-package" value="Viewport"/>
+            </feature>
+        </config-file>
+        <source-file src="src/Viewport.cs" />
+    </platform>
+    
+</plugin>
